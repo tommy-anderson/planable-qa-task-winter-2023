@@ -1,3 +1,7 @@
+Bug Report Link:
+
+https://docs.google.com/spreadsheets/d/1glNxhz-BMjTGYQYMXPVxbahWTwH22Bvfy_R42gZXQG8/edit?usp=sharing
+
 # QA Task
 
 Thank you for considering the QA Engineer role at Planable. Please follow the steps below for the take-home task:
