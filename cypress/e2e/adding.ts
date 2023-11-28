@@ -53,7 +53,11 @@ describe("Tests for adding items", () => {
     stepDescription(
       "Type a value into the input field e.g. 'Apple' and hit the 'Enter' key"
     )
-    typeTextAndHitKey(selectors.inputField, testData.apple, basicData.keyButtons.enter)
+    typeTextAndHitKey(
+      selectors.inputField,
+      testData.apple,
+      basicData.keyButtons.enter
+    )
 
     stepDescription("Check the presence of the added item")
     checkElementState(selectors.createdItem, basicData.stateData.beVisible)

@@ -25,7 +25,11 @@ describe("Tests for editing items", () => {
     reachPage("/")
 
     stepDescription("PRECONDITION: At least one item should be created")
-    typeTextAndHitKey(selectors.inputField, testData.apple, basicData.keyButtons.enter)
+    typeTextAndHitKey(
+      selectors.inputField,
+      testData.apple,
+      basicData.keyButtons.enter
+    )
   })
 
   it("Toggle 'it's completed' state", () => {

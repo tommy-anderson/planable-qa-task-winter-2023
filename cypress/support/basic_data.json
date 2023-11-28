@@ -15,10 +15,5 @@
     "leftArrow": "{leftArrow}",
     "enter": "{enter}",
     "escape": "{esc}"
-  },
-
-  "boolean": {
-    "true": "true",
-    "false": "false"
   }
 }
