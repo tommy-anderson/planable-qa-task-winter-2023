@@ -6,7 +6,7 @@ import {
   clickItem,
 } from "../support/commands"
 import basicData from "../support/basic_data.json"
-import selectors from "../selectors/selectors.json"
+import selectors from "../selectors/selectors.sel"
 import testData from "../fixtures/testData.json"
 
 describe("Tests for deleting items", () => {

@@ -27,10 +27,10 @@ export const stepDescription = (textDescription) => {
  *
  */
 export const clickButtonByContainigText = (textButton) => {
-    cy.contains("button", textButton).click({force: true})
-  }
+  cy.contains("button", textButton).click({ force: true })
+}
 
-  /**
+/**
  * StClick on element containing text
  *
  * @param {string} elementLocator Locator of element id, class...
@@ -38,10 +38,10 @@ export const clickButtonByContainigText = (textButton) => {
  *
  */
 export const clickElementByContainigText = (elementLocator, textButton) => {
-    cy.contains(elementLocator, textButton).click()
-  }
+  cy.contains(elementLocator, textButton).click()
+}
 
-  /**
+/**
  * Check the state of the element
  *
  * @param {string} elementLocator Locator of element id, class...
@@ -49,18 +49,27 @@ export const clickElementByContainigText = (elementLocator, textButton) => {
  *
  */
 export const checkElementState = (elementLocator, state) => {
-    cy.get(elementLocator).should(state)
+  cy.get(elementLocator).should(state)
 }
 
 /**
- * Check that element has the desired text
+ * Check that added item has desired value
  *
- * @param {string} elementLocator Locator of element id, class...
- * @param {string} text The text that should be present when finding the element
+ * @param {string} itemName Locator of item's name value
+ * @param {string} itemQuantity Locator of item's quantity value
+ * @param {string} expectedResult Th expected result
  *
  */
-export const checkElementHasText = (elementLocator, text) => {
-    cy.get(elementLocator).should('have.text', text)
+export const checkTextItem = (itemName, itemQuantity, expectedResult) => {
+  cy.get(itemName)
+    .invoke("text")
+    .then((iName) => {
+      cy.get(itemQuantity)
+        .invoke("text")
+        .then((iQuantity) => {
+          expect(`${iName} ${iQuantity}`).to.eq(expectedResult)
+        })
+    })
 }
 
 /**
@@ -70,31 +79,30 @@ export const checkElementHasText = (elementLocator, text) => {
  *
  */
 export const reachPage = (url) => {
-    cy.visit(url)
+  cy.visit(url)
 }
 
 /**
- * Type text 
+ * Type text
  *
  * @param {string} elementLocator Locator of element id, class...
  * @param {string} textValue text to type into input field
  *
  */
 export const typeText = (elementLocator, textValue) => {
-    cy.get(elementLocator).type(textValue)
+  cy.get(elementLocator).type(textValue)
 }
 
 /**
- * Hit a key 
+ * Hit a key
  *
  * @param {string} elementLocator Locator of element id, class...
  * @param {string} keyValue key to be hit
  *
  */
 export const hitKey = (elementLocator, keyValue) => {
-    cy.get(elementLocator).type(keyValue)
+  cy.get(elementLocator).type(keyValue)
 }
-
 
 /**
  * Type text and hit the 'Enter' key
@@ -105,9 +113,8 @@ export const hitKey = (elementLocator, keyValue) => {
  *
  */
 export const typeTextAndHitKey = (elementLocator, textValue, keyValue) => {
-    cy.get(elementLocator).type(textValue + keyValue)
+  cy.get(elementLocator).type(textValue + keyValue)
 }
-
 
 /**
  * Select the entire value from the input field and replace it with another one
@@ -117,7 +124,7 @@ export const typeTextAndHitKey = (elementLocator, textValue, keyValue) => {
  *
  */
 export const selectAllAndTypeValue = (elementLocator, value) => {
-    cy.get(elementLocator).type("{selectall}" + value)
+  cy.get(elementLocator).type("{selectall}" + value)
 }
 
 /**
@@ -128,7 +135,7 @@ export const selectAllAndTypeValue = (elementLocator, value) => {
  *
  */
 export const selectItem = (selectLocator, selectOption) => {
-    cy.get(selectLocator).select(selectOption)
+  cy.get(selectLocator).select(selectOption)
 }
 
 /**
@@ -138,7 +145,7 @@ export const selectItem = (selectLocator, selectOption) => {
  *
  */
 export const clickItem = (item) => {
-    cy.get(item).click({force: true})
+  cy.get(item).click({ force: true })
 }
 
 /**
@@ -149,8 +156,12 @@ export const clickItem = (item) => {
  * @param {string} cssPropertyValue CSS property value
  *
  */
-export const checkElementHasCSSProperty = (elementLocator, cssProperty, cssPropertyValue) => {
-    cy.get(elementLocator).should('have.css', cssProperty, cssPropertyValue)
+export const checkElementHasCSSProperty = (
+  elementLocator,
+  cssProperty,
+  cssPropertyValue
+) => {
+  cy.get(elementLocator).should("have.css", cssProperty, cssPropertyValue)
 }
 
 /**
@@ -161,8 +172,12 @@ export const checkElementHasCSSProperty = (elementLocator, cssProperty, cssPrope
  * @param {string} cssPropertyValue CSS property value
  *
  */
-export const checkElementHasNotCSSProperty = (elementLocator, cssProperty, cssPropertyValue) => {
-    cy.get(elementLocator).should('not.have.css', cssProperty, cssPropertyValue)
+export const checkElementHasNotCSSProperty = (
+  elementLocator,
+  cssProperty,
+  cssPropertyValue
+) => {
+  cy.get(elementLocator).should("not.have.css", cssProperty, cssPropertyValue)
 }
 
 /**
@@ -172,7 +187,7 @@ export const checkElementHasNotCSSProperty = (elementLocator, cssProperty, cssPr
  *
  */
 export const clearInputField = (inputField) => {
-    cy.get(inputField).clear()
+  cy.get(inputField).clear()
 }
 
 /**
@@ -183,5 +198,5 @@ export const clearInputField = (inputField) => {
  * @param {string} attrName The name of the attribute
  */
 export const checkAttrStateOnButton = (buttonName, attrCondition, attrName) => {
-    cy.contains('button', buttonName).should(attrCondition, attrName)
+  cy.contains("button", buttonName).should(attrCondition, attrName)
 }

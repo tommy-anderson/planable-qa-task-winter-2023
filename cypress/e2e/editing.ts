@@ -3,7 +3,7 @@ import {
   stepDescription,
   clickButtonByContainigText,
   checkElementState,
-  checkElementHasText,
+  checkTextItem,
   typeText,
   typeTextAndHitKey,
   selectAllAndTypeValue,
@@ -16,7 +16,7 @@ import {
   checkAttrStateOnButton,
 } from "../support/commands"
 import basicData from "../support/basic_data.json"
-import selectors from "../selectors/selectors.json"
+import selectors from "../selectors/selectors.sel"
 import testData from "../fixtures/testData.json"
 
 describe("Tests for editing items", () => {
@@ -94,7 +94,7 @@ describe("Tests for editing items", () => {
 
   it("Edit item: change name, quantity and unit", () => {
     stepDescription("Check the current values for the item")
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Apple1 units")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Apple 1 units")
 
     stepDescription("Click on 'edit' icon to open the 'Edit' panel")
     clickItem(selectors.editIcon)
@@ -116,7 +116,7 @@ describe("Tests for editing items", () => {
     clickButtonByContainigText("Save")
 
     stepDescription("Confirm that the changes has been saved")
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Banana6 cups")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Banana 6 cups")
   })
 
   it("Edit item: save the changes by clearing the name input field", () => {

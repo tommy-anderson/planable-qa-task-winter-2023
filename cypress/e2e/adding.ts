@@ -4,14 +4,14 @@ import {
   stepDescription,
   clickButtonByContainigText,
   checkElementState,
-  checkElementHasText,
+  checkTextItem,
   typeText,
   typeTextAndHitKey,
   selectAllAndTypeValue,
   selectItem,
 } from "../support/commands"
 import basicData from "../support/basic_data.json"
-import selectors from "../selectors/selectors.json"
+import selectors from "../selectors/selectors.sel"
 import testData from "../fixtures/testData.json"
 
 describe("Tests for adding items", () => {
@@ -46,7 +46,7 @@ describe("Tests for adding items", () => {
     checkElementState(selectors.createdItem, basicData.stateData.beVisible)
 
     stepDescription("Check the selected item's name and quantity")
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Apple1 units")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Apple 1 units")
   })
 
   it("Add item containing at least one character by hitting the 'Enter' key", () => {
@@ -63,7 +63,7 @@ describe("Tests for adding items", () => {
     checkElementState(selectors.createdItem, basicData.stateData.beVisible)
 
     stepDescription("Check the selected item's name and quantity")
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Apple1 units")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Apple 1 units")
   })
 
   it("Add item with a positive quantity value", () => {
@@ -77,7 +77,7 @@ describe("Tests for adding items", () => {
     clickButtonByContainigText("Add")
 
     stepDescription("Check the selected item's name and quantity")
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Apple3 units")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Apple 3 units")
   })
 
   it.skip("Add item with a negative quantity value", () => {
@@ -93,7 +93,7 @@ describe("Tests for adding items", () => {
     stepDescription(
       "Check the selected item's name and quantity (by default the quantity value should be 1)"
     )
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Apple1 units")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Apple 1 units")
   })
 
   it("Add item with a different value for 'unit' field", () => {
@@ -107,6 +107,6 @@ describe("Tests for adding items", () => {
     clickButtonByContainigText("Add")
 
     stepDescription("Check the selected item's name, quantity and unit")
-    checkElementHasText(selectors.nameAndQuantityItemValue, "Apple1 pounds")
+    checkTextItem(selectors.itemName, selectors.itemQuantity, "Apple 1 pounds")
   })
 })
