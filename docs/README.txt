@@ -2,7 +2,7 @@ In this document the following topics like observations, recommendations and not
 
 
 OBSERVATIONS and RECOMMENDATIONS:
-	- The "Must contain at least one character" it's not complete or not well defined for the name field. When testing the feature, it allows typing all type of characters(alphanumeric characters, special characters etc.). 
+	- The "The first letter should be capitalized" it's not complete or not well defined for the name field. When testing the feature, it allows typing all type of characters(alphanumeric characters, special characters etc.). 
 	  If the system allows the insertion of letters only, this requirement won't deliver any value because the system automatically saves the inserted value with the first letter in upper case;
 	  if the system allows the insertion of all characters, in this case it will be a bug, because when we insert a value like "123abc" it will allow us to save it, which would mean that the requirement won't be applied.
 	  (see OBS_001.mp4 and OBS_002.mp4)
