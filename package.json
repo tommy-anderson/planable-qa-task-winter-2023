@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cypress": "^13.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -27,5 +28,10 @@
     "tailwindcss": "^3.3.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
-  }
+  },
+  "description": "Thank you for considering the QA Engineer role at Planable. Please follow the steps below for the take-home task:",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
