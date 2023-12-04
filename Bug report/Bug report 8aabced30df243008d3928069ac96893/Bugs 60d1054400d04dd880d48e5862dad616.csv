@@ -1,0 +1,52 @@
+﻿ID,Name,Description,Stept to reproduce,Expected result,Actual result,Priority,Severity,Created time,Tags
+#001,User is able to save an empty list item.,"According to documentation, name must contain at least one letter.","1. Open the application
+2. Leave the text placeholder empty.
+3. Click on “Add” button.",“Add” button should not work if the list item placeholder is empty.,User is able to save an empty element to the list.,Medium,Medium,"December 4, 2023 8:21 AM","Add, Functional"
+#002,Negative integer can be selected if pasted.,"When user is creating an item, there is a possibility to paste a negative value to the “quantity” placeholder. ","1. Open the application
+2. Paste a negative integer to the “quantity” placeholder.
+3. Click on “Save” button. ","User should not be able to add an item with a negative quantity selected. ","User is able to add an element with a negative quantity if it is directly inserted with “paste” function. ",Medium,Low,"December 4, 2023 9:22 AM","Add, Functional"
+#003,"Same name items deleting. ","When user deletes an item with the same name as another items, another items are also deleted. ","1. Open the application
+2. Add 2 items with the same name.
+3. Delete one element. ",Delete function should only delete that exact item user intends to delete.,All items with the same name are deleted.,High,High,"December 4, 2023 8:39 AM","Edit, Functional"
+#004,User can save item with non capital first letter.,"When editing, user is able to save item with a non capitalised first letter.","1. Open the application
+2. Add an item to the list.
+3. Edit item and set the first letter as non capitalized.
+4. Click on “Save” button. ","After saving, first letter should be capitalised as it happens with the “Add” function. ","After saving, the first letter stands non capitalised.  ",Medium,Low,"December 4, 2023 8:46 AM","Edit, Functional"
+#005,"Pounds unit missing. ","The “pounds” unit measure is missing in the edit section. When user is trying to modify an item, it only allows changing the unit to “units” and “cups”.  ","1. Open the application
+2. Add an item to the list.
+3. Edit the item.
+4. Choose the “pounds” element from the “unit measurement” dropdown. ","User is able to change unit to all three options available. ","User is not able to select “pounds” in the edit section. ",Medium,Medium,"December 4, 2023 8:52 AM","Edit, Functional"
+#006,"“unit” is selected when editing an element.  ","When user is editing an element, the measure unit is set to “unit” automatically, no matter what unit measure was selected prior. ","1. Open the application
+2. Add an item to the list.
+3. Edit the item.
+4. See the “unit measurement” dropdown. ",The measure unit shown is the same in the edit section as it was selecting when adding element to the list.,The measure unit shown in the edit section is always set to “unit”,Medium,Medium,"December 4, 2023 8:59 AM","Edit, Functional"
+#007,"Negative integer can be assigned when editing. ","When user is editing an item from the list, it is possible to change the quantity to a negative one, e.g. “-4”.  ","1. Open the application
+2. Add an item to the list.
+3. Edit the item.
+4. Select a negative integer for an item. ","User should not be able neither to select and save a quantity for an item to a negative value.  ","User is able to change the quantity of an item to a negative value in the editing section. ",Medium,Medium,"December 4, 2023 9:05 AM","Edit, Functional"
+#008,"Item is saved on closing the edit section. ","When user is closing the edit section without clicking on “Save” button, the item is saved anyways.  ","1. Open the application
+2. Add an item to the list.
+3. Edit the item.
+4. Close the edit modal. ","After closing the edit modal, all item attributes are changed.","When closing the edit modal, all item attributes should stay like before editing the item. ",Medium,Medium,"December 4, 2023 9:10 AM","Edit, Functional"
+#009,Modal is not closed on “Esc”,"The edit section is not closed when user press the “Esc” button on the keyboard. ","1. Open the application
+2. Add an item to the list.
+3. Edit the item.
+4. Press “Esc” to exit the modal. ",Modal should be closed on “Esc”.,"Modal is not closed when user presses “Esc”. ",Medium,Low,"December 4, 2023 9:31 AM","Edit, Functional, Keyboard"
+#010,"Item is not saved when “Enter” is pressed. ","User is not able to save an item from the edit modal by pressing “Enter” on the keyboard. ","1. Open the application
+2. Add an item to the list.
+3. Edit the item.
+4. Press “Enter” to exit the modal. ","Item should be edited and saved successfully. ","“Enter” key is triggering nothing.  ",Medium,Low,"December 4, 2023 9:37 AM","Edit, Functional, Keyboard"
+#011,"Strikethrough is only applied to name. ","When user marks an item as completed, the strikethrough style is not applied to unit and quantity. ","1. Open the application
+2. Add an item to the list.
+3. Set the item as completed. 
+4. See the strikethrough style. ","All three elements of an item should have strikethrough text style. ",Quantity and unit attributes don’t have a strikethrough style applied.,Low,Low,"December 4, 2023 9:40 AM","UI, UX"
+#012,"Height of an element is changed if it is completed. ","When user sets an item to a completed state, its height decreases , which causes an UX discomfort. ","1. Open the application
+2. Add an item to the list.
+3. Set the item as completed. 
+4. See the size of an item. ",Size stays the same whether item is completed or not.,"Height of a completed item is smaller than of a non completed one. ",Low,Low,"December 4, 2023 9:50 AM","UI, UX"
+#013,"Quantity and unit are not correlated between each other. ","If the user selects 1 from the quantity selector, the unit will stay in plural. ","1. Open the application
+2. Set quantity to one and select any unit. 
+3. See the item. ","Quantity and unit should be correlated. ","Unit is not depending on quantity, so that “rice 1 cups” is possible. ",Low,Low,"December 4, 2023 9:54 AM","UI, UX"
+#014,"Cursor changes its style if name is empty. ","Cursor changes its style to pointer even if the name is empty and user should not be able to add an element. ","1. Open the application
+2. Hover the mouse to the “Add” button. 
+3. Notice its style. ","Cursor should not change its style as long as we are not able to add an empty item to the list. ","Cursor changes its style to pointer when hover on “Add” button. ",Low,Low,"December 4, 2023 9:59 AM","UI, UX"
