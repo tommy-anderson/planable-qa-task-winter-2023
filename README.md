@@ -1,5 +1,7 @@
 # QA Task
 
+https://www.notion.so/Bug-report-8aabced30df243008d3928069ac96893?pvs=4  -  link to the bug report. Let me know if you are not able to access it, as it is the first time I am sharing a notion file, not sure how it works:)
+
 Thank you for considering the QA Engineer role at Planable. Please follow the steps below for the take-home task:
 
 1. Fork the repo privately to your GitHub account.
