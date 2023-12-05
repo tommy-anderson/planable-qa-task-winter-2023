@@ -82,3 +82,9 @@ Users should be able to do the following actions:
 - Utilize the Delete button to remove an item from the list
 - Press the Enter key to add or save items
 - Hit the Esc key to close the modal
+
+## QA Testing Report
+
+For detailed information on the testing process and the findings:
+
+[QA Testing Report](https://feather-tick-14a.notion.site/Report-ef2919649f0847c9840ed48c4c43f021)
