@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ignore screenshot comparison and diff files
+cypress-visual-screenshots/comparison
+cypress-visual-screenshots/diff
+
+# ignore cypress visual report after test execution
+cypress-visual-report
+
+# ignore generated files for reports
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+cypress/cypress-visual-report

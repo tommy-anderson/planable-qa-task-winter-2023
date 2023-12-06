@@ -1,0 +1,19 @@
+{
+  "stateData": {
+    "beVisible": "be.visible",
+    "notBeVisible": "not.be.visible",
+    "exists": "exist",
+    "notExist": "not.exist",
+    "haveAttr": "have.attr",
+    "notHaveAttr": "not.have.attr"
+  },
+
+  "keyButtons": {
+    "upArrow": "{upArrow}",
+    "downArrow": "{downArrow}",
+    "rightArrow": "{rightArrow}",
+    "leftArrow": "{leftArrow}",
+    "enter": "{enter}",
+    "escape": "{esc}"
+  }
+}
